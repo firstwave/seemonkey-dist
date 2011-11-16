@@ -1,0 +1,62 @@
+2011-11-15 14:54:39.366 java[2111:1f07] Loading Maximizer into bundle: com.apple.javajdk16.cmd
+Nov 15, 2011 2:54:44 PM com.android.chimpchat.ChimpManager sendMonkeyEventAndGetResponse
+INFO: Monkey Command: wake.
+Nov 15, 2011 2:54:44 PM com.android.chimpchat.ChimpManager sendMonkeyEventAndGetResponse
+INFO: Monkey Command: getvar display.width.
+Nov 15, 2011 2:54:44 PM com.android.chimpchat.ChimpManager sendMonkeyEventAndGetResponse
+INFO: Monkey Command: getvar display.height.
+Nov 15, 2011 2:54:54 PM com.android.chimpchat.ChimpManager sendMonkeyEventAndGetResponse
+INFO: Monkey Command: press KEYCODE_MENU.
+Nov 15, 2011 2:54:55 PM com.android.chimpchat.ChimpManager sendMonkeyEventAndGetResponse
+INFO: Monkey Command: press KEYCODE_MENU.
+Nov 15, 2011 2:54:56 PM com.android.chimpchat.ChimpManager sendMonkeyEventAndGetResponse
+INFO: Monkey Command: press KEYCODE_MENU.
+.Using substitute bounding box at (0,0)->(26,10)
+Using substitute bounding box at (7,0)->(30,12)
+Using substitute bounding box at (0,0)->(36,23)
+Using substitute bounding box at (4,3)->(18,10)
+Using substitute bounding box at (0,1)->(10,14)
+Using substitute bounding box at (0,0)->(61,27)
+Using substitute bounding box at (0,3)->(15,12)
+Using substitute bounding box at (0,0)->(10,10)
+Using substitute bounding box at (0,0)->(14,10)
+Using substitute bounding box at (0,0)->(18,10)
+Using substitute bounding box at (0,0)->(16,12)
+Using substitute bounding box at (4,8)->(11,18)
+Using substitute bounding box at (0,0)->(26,10)
+Using substitute bounding box at (7,0)->(30,12)
+Using substitute bounding box at (0,0)->(36,23)
+Using substitute bounding box at (4,3)->(18,10)
+Using substitute bounding box at (0,1)->(10,14)
+Using substitute bounding box at (0,0)->(61,27)
+Using substitute bounding box at (0,3)->(15,12)
+Using substitute bounding box at (0,0)->(10,10)
+Using substitute bounding box at (0,0)->(14,10)
+Using substitute bounding box at (0,0)->(18,10)
+Using substitute bounding box at (0,0)->(16,12)
+Using substitute bounding box at (4,8)->(11,18)
+Using substitute bounding box at (0,0)->(26,10)
+Using substitute bounding box at (7,0)->(30,12)
+Using substitute bounding box at (0,0)->(36,23)
+Using substitute bounding box at (4,3)->(18,10)
+Using substitute bounding box at (0,1)->(10,14)
+Using substitute bounding box at (0,0)->(61,27)
+Using substitute bounding box at (0,3)->(15,12)
+Using substitute bounding box at (0,0)->(10,10)
+Using substitute bounding box at (0,0)->(14,10)
+Using substitute bounding box at (0,0)->(18,10)
+Using substitute bounding box at (0,0)->(16,12)
+Using substitute bounding box at (4,8)->(11,18)
+F
+======================================================================
+FAIL: testB_Fail (__main__.TestAndroidBasic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/obartley/Projects/Jenkins/./example.sikuli/example.py", line 27, in testB_Fail
+    assert scr.exists("DOES NOT EXIST")
+AssertionError
+
+----------------------------------------------------------------------
+Ran 2 tests in 7.070s
+
+FAILED (failures=1)
