@@ -5,8 +5,8 @@ if [[ "$1" == "--android-sdk" ]]; then
 	shift; shift
 fi
 
-SIKULI_SCRIPT_JAR=lib/sikuli-script.jar
-SIKULI_PLUGIN_JAR=lib/seemonkey.jar
+SIKULI_SCRIPT_JAR=libs/sikuli-script.jar
+SIKULI_PLUGIN_JAR=libs/seemonkey.jar
 
 CLASSPATH=$SIKULI_SCRIPT_JAR:$SIKULI_PLUGIN_JAR
 CLASSPATH=${CLASSPATH}:$ANDROID_SDK/tools/lib/guavalib.jar
