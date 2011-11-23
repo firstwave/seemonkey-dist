@@ -1,4 +1,5 @@
 import unittest
+import xmlrunner
 import sys
 
 
@@ -23,4 +24,4 @@ class TestAndroidBasic(unittest.TestCase):
         scr.press('HOME')
 
 if __name__ == '__main__':
-    unittest.main() 
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
