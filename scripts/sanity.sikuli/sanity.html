@@ -91,9 +91,12 @@ scr = SeeMonkey() <span class="cmt"># compatiable with Sikuli Screen/Region</spa
 dev = scr.getMonkeyDevice() <span class="cmt"># Android Monkey device</span>
 scr.autoDelay = <span class="dig">100</span>
 <span class="kw">class</span> TestAndroidBasic(unittest.TestCase):
-    <span class="kw">def</span> testA_Sanity(self):
+    <span class="kw">def</span> testA_Success(self):
         scr.wake()
         scr.press(<span class="str">'HOME'</span>)
+
+    <span class="kw">def</span> testB_Failure(self):
+        <span class="kw">assert</span> False
 
 <span class="kw">if</span> __name__ == <span class="str">'__main__'</span>:
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output=<span class="str">'test-reports'</span>))

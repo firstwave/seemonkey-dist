@@ -19,9 +19,12 @@ assert scr != None
 dev = scr.getMonkeyDevice() # Android Monkey device
 scr.autoDelay = 100
 class TestAndroidBasic(unittest.TestCase):
-    def testA_Sanity(self):
+    def testA_Success(self):
         scr.wake()
         scr.press('HOME')
+    
+    def testB_Failure(self):
+        assert False
 
 if __name__ == '__main__':
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
