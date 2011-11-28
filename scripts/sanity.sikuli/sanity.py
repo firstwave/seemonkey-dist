@@ -23,7 +23,7 @@ class TestAndroidBasic(unittest.TestCase):
         scr.wake()
         scr.press('HOME')
     
-    def testB_Failure(self):
+    def testB_Assertion(self):
         assert True
 
 if __name__ == '__main__':
