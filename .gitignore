@@ -1,4 +1,5 @@
 .DS_Store
-test-reports
+test-reports/
 *.html
-*.xml
+
+update-pkg.sh

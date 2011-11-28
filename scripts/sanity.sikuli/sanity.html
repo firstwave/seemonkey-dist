@@ -95,8 +95,8 @@ scr.autoDelay = <span class="dig">100</span>
         scr.wake()
         scr.press(<span class="str">'HOME'</span>)
 
-    <span class="kw">def</span> testB_Assertion(self):
-        <span class="kw">assert</span> True
+    <span class="kw">def</span> testB_Failure(self):
+        <span class="kw">assert</span> False
 
 <span class="kw">if</span> __name__ == <span class="str">'__main__'</span>:
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output=<span class="str">'test-reports'</span>))

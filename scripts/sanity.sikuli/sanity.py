@@ -23,8 +23,8 @@ class TestAndroidBasic(unittest.TestCase):
         scr.wake()
         scr.press('HOME')
     
-    def testB_Assertion(self):
-        assert True
+    def testB_Failure(self):
+        assert False
 
 if __name__ == '__main__':
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
