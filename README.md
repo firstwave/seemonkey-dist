@@ -51,6 +51,6 @@ For more usage information, see `run-script -h`.
 
 ### Version Info ###
 
-Author: Oliver Bartley (obartley@ebay.com)
-Date: 30 NOV 2011
-Version: 0.1
+* Author: Oliver Bartley (obartley@ebay.com)
+* Date: 30 NOV 2011
+* Version: 0.1
