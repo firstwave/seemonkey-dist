@@ -44,3 +44,4 @@ Due to the way Sikuli searches for the native [OpenCV](http://opencv.willowgarag
 * manually set the `--seemonkey-root` option when invoking `run-script` 
 	* **NOTE** this has the effect of changing the working dir, so ensure you give relative paths that are relative to this path, not your original working directory.
 
+For more usage information, see `run-script -h`.
