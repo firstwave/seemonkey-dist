@@ -14,6 +14,7 @@ If you only plan on running SeeMonkey scripts (such as on a build server for con
 but you do need to take extra care to ensure that the Sikuli interpereter can locate the native [OpenCV](http://opencv.willowgarage.com/wiki/) libraries.
 
 The distruibution package is organized like so:
+
 * / _installation root_
     * run-script _Python wrapper used to properly configure a JVM and invoke the Sikuli interpereter._
     * scripts/ _Scripts can be located anywhere, this directory is provided as a convenient way to redistribute scripts within the distribution package._
