@@ -1,12 +1,15 @@
 # SeeMonkey #
 
 SeeMonkey is a [Sikuli](http://sikuli.org/) extension which enables running image-driven UI scripts on Android devices and emulators.
+It uses the Android Debug Bridge to communicate with Android devices and emulators.
+SeeMonkey scripts are written in the Python programming language.
 
 ### Requirements and Installation ###
 
 Installation of the [Sikuli IDE](http://sikuli.org/download.shtml) (currently Sikuli X 1.0rc3) is recommended if you plan on writing SeeMonkey scripts. The Sikuli IDE is avalable in Windows, Mac OS X, and GNU/Linux flavors.
 Currently, SeeMonkey has only been tested only Mac OS X 10.6/10.7. Please send feedback about what works and what doesn't on various other platforms.
 If you only plan on running SeeMonkey scripts (such as on a build server for continuous integration) you do not need to install the Sikuli IDE.
+**NOTE** It is not possible to execute SeeMonkey scripts from within the Sikuli IDE -- you must instead use the `run-script` command, which is outlined below.
 
 The [Android SDK](http://developer.android.com/sdk/index.html) (currently revision 15) is also required.
 It is recommended that you set the environment variable `$ANDROID_SDK` to contain the path to your SDK installation.
@@ -32,7 +35,7 @@ SeeMonkey scripts are Sikuli scripts written to take advantage of the SeeMonkey 
 A Sikuli script is organized in a .sikuli package, similar to a OS X .app package.
 This package contains a Python script executed by the Sikuli interpereter and may contain an HTML file which tells the Sikuli IDE how to display the script;
 Both .py and .html files have the same name as the .sikuli package, e.g. example.sikuli contains example.py.
-The .sikuli package can also contain a number of .png files which can then be referenced in the Python script.
+The .sikuli package can also contain a number of .png files which can then be referenced in the .py script.
 
 To run a SeeMonkey script, use the `run-script` copmmand and supply a list of .sikuli packages as arguments.
 
@@ -45,3 +48,9 @@ Due to the way Sikuli searches for the native [OpenCV](http://opencv.willowgarag
 	* **NOTE** this has the effect of changing the working dir, so ensure you give relative paths that are relative to this path, not your original working directory.
 
 For more usage information, see `run-script -h`.
+
+### Version Info ###
+
+Author: Oliver Bartley (obartley@ebay.com)
+Date: 30 NOV 2011
+Version: 0.1
