@@ -49,8 +49,7 @@ Due to the way Sikuli searches for the native [OpenCV](http://opencv.willowgarag
 
 For more usage information, see `run-script -h`.
 
-### Version Info ###
-
+----
 * Author: Oliver Bartley (obartley@ebay.com)
 * Date: 30 NOV 2011
 * Version: 0.1
