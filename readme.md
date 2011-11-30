@@ -15,7 +15,8 @@ but you do need to take extra care to ensure that Sikuli can locate the native [
 Due to the way Sikuli searches for these libraries, if you do not have the Sikuli IDE installed in the default location you must do one of the following:
 
 * `cd` into the installation root before invoking `run-script`
-* manually set the `--seemonkey-root` option when invoking `run-script` *NOTE* this has the effect of changing the working dir, so endure you give relative paths that are relative to this, not your original working directory.
+* manually set the `--seemonkey-root` option when invoking `run-script` 
+	* **NOTE** this has the effect of changing the working dir, so ensure you give relative paths that are relative to this path, not your original working directory.
 
 This lets Sikuli find libraries which it assumes to be located in `libs\`.
 
