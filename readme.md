@@ -28,3 +28,9 @@ The distruibution package is organized like so:
     	* sikuli-script.jar
 		* _opencv libraries_
 
+SeeMonkey Scripts
+-----
+SeeMonkey scripts are Sikuli scripts written to take advantage of the custom SeeMonkey api provided by seemonkey.jar.
+A Sikuli script is organized in a *.sikuli package, similar to a OS X *.app package. 
+This package (example.sikuli for instance) would contain the Python script executed by the Sikuli interpereter and may contain an HTML file which tells the Sikuli IDE how to display the script.
+The *.sikuli package can also contain a number of *.png files which are referenced in the Python script.
