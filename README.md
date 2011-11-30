@@ -11,8 +11,8 @@ Currently, SeeMonkey has only been tested only Mac OS X 10.6/10.7. Please send f
 If you only plan on running SeeMonkey scripts (such as on a build server for continuous integration) you do not need to install the Sikuli IDE.
 **NOTE** It is not possible to execute SeeMonkey scripts from within the Sikuli IDE -- you must instead use the `run-script` command, which is outlined below.
 
-The [Android SDK](http://developer.android.com/sdk/index.html) (currently revision 15) is also required.
-It is recommended that you set the environment variable `$ANDROID_SDK` to contain the path to your SDK installation.
+The [Android SDK](http://developer.android.com/sdk/index.html) (currently revision 15) is required;
+it is recommended that you set the environment variable `$ANDROID_SDK` to contain the path to your SDK installation.
 
 This lets Sikuli find libraries which it assumes to be located in `libs\`.
 
