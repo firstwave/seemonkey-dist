@@ -28,6 +28,8 @@ The distruibution package is organized like so:
     	* `seemonkey.jar`
     	* `sikuli-script.jar`
         * _opencv libraries_
+    * `docs/`
+        * _API documentation_
 
 ### SeeMonkey Scripts ###
 
