@@ -12,160 +12,160 @@ i.e. `click` methods utilize the vision engine to drive touch-screen events, and
 
 ### Methods ###
 
-#### `SeeMonkey()`, `SeeMonkey(long, String)`
+#### SeeMonkey(), SeeMonkey(long, String)
 
-    To use the SeeMonkey API in a SIkuli script, you must first initialize a SeeMonkey object:
+To use the SeeMonkey API in a Sikuli script, you must first initialize a SeeMonkey object:
+
+``` python
+from com.criticalpath.seemonkey import SeeMonkey
+
+dev = SeeMonkey()
+```
+
+Alternately, you can specify a timeout in miliseconds and/or a specific device/emulator by serial number:
+
+``` python
+dev = SeeMonkey(10000, null) # connect to default device with a timeout of 10 seconds
+dev = SeeMonkey(-1, 'emulator-5554') # connect to specified device with default timeout
+```
+
+
+#### ScreenImage capture(), capture(int, int, int, int), capture(Rectangle), capture(Region)
+
+_IScreen_ interface method, used by Sikuli.
+
+
+#### Rectangle getBounds()
+
+_IScreen_ interface method, used by Sikuli.
+
+
+#### IRobot getRobot()
+
+_IScreen_ interface method, used by Sikuli.
+
+
+#### Region newRegion(Rectangle)
+
+_IScreen_ interface method, used by Sikuli.
+
+
+#### void showMove(Location),
+void showClick(Location),
+void showTarget(Location),
+void showDropTarget(Location)
+
+_IScreen_ interface methods. No implementation on Android.
+
+
+#### MonkeyDevice getMonkeyDevice()
+
+Returns a com.android.monkeyrunner.MonkeyDevice.
+See the documentation at http://developer.android.com/guide/developing/tools/MonkeyDevice.html for full documentation.
+
+
+#### String getArgs(String)
+
+Used to get System properties through Java's System.getProperty() method.
+This is useful when passsing data at invocation via the run-script command using the --set-property argument.
+For instance, using this command to run a SeeMonkey script:
     
-    ``` python
-    from com.criticalpath.seemonkey import SeeMonkey
+    $ ./run-script --set-property "test_output=/foo/bar"
     
-    dev = SeeMonkey()
-    ```
-    
-    Alternately, you can specify a timeout in miliseconds and/or a specific device/emulator by serial number:
-    
-    ``` python
-    dev = SeeMonkey(10000, null) # connect to default device with a timeout of 10 seconds
-    dev = SeeMonkey(-1, 'emulator-5554') # connect to specified device with default timeout
-    ```
+Then `getArgs("test_output");` would return `"/foo/bar"`
 
 
-#### `ScreenImage capture()`, `capture(int, int, int, int)`, `capture(Rectangle)`, `capture(Region)`
+#### void press(String), void press(String, int), void press(String, String)
 
-    _IScreen_ interface method, used by Sikuli.
+Trigger a hardware key-press event.
+See http://developer.android.com/reference/android/view/KeyEvent.html for information on valid keycodes.
+Note that it is not necessary to use the full keycode name, such as `KEYCODE_HOME`.
+This method automagically determines the correct keycode, so:
 
+``` python
+press("KEYCODE_HOME")
+press("HOME")
+press("home")
+```
 
-#### `Rectangle getBounds()`
+all perform the same action.
+The second argument is used to indicate a type:
 
-    _IScreen_ interface method, used by Sikuli.
-   
-    
-#### `IRobot getRobot()`
-
-    _IScreen_ interface method, used by Sikuli.
-
-
-#### `Region newRegion(Rectangle)`
-
-    _IScreen_ interface method, used by Sikuli.
-
-
-#### `void showMove(Location)`,
-`void showClick(Location)`,
-`void showTarget(Location)`,
-`void showDropTarget(Location)`
-
-    _IScreen_ interface methods. No implementation on Android.
+``` python
+press("home", "down") # press key down
+press("home", "up") # release key
+press("home", "down_and_up") # default, not required
+```
 
 
-#### `MonkeyDevice getMonkeyDevice()`
+#### void longPress(String)
 
-    Returns a `com.android.monkeyrunner.MonkeyDevice`.
-    See the documentation at http://developer.android.com/guide/developing/tools/MonkeyDevice.html for full documentation.
-
-    
-#### `String getArgs(String)`
-
-    Used to get System properties through Java's `System.getProperty()` method.
-    This is useful when passsing data at invocation via the `run-script` command using the `--set-property` argument.
-    For instance, using this command to run a SeeMonkey script:
-        
-        $ ./run-script --set-property "test_output=/foo/bar"
-        
-    Then `getArgs("test_output");` would return `"/foo/bar"`
- 
-    
-#### `void press(String)`, `void press(String, int)`, `void press(String, String)`
-
-    Trigger a hardware key-press event.
-    See http://developer.android.com/reference/android/view/KeyEvent.html for information on valid keycodes.
-    Note that it is not necessary to use the full keycode name, such as `KEYCODE_HOME`.
-    This method automagically determines the correct keycode, so:
-    
-    ``` python
-    press("KEYCODE_HOME")
-    press("HOME")
-    press("home")
-    ```
-    
-    all perform the same action.
-    The second argument is used to indicate a type:
-    
-    ``` python
-    press("home", "down") # press key down
-    press("home", "up") # release key
-    press("home", "down_and_up") # default, not required
-    ```
+Trigger a long press of a hardware button.
+The keycode is handled the same as in `press()`, and the duration can be adjusted with the SeeMonkey.longPressDelay field.    
 
 
-#### `void longPress(String)`
+#### int type(String)
 
-    Trigger a long press of a hardware button.
-    The keycode is handled the same as in `press()`, and the duration can be adjusted with the `SeeMonkey.longPressDelay` field.    
-
-
-#### `int type(String)`
-    
-    Send a sequence of hardware-keyboard keystrokes.
-        
-        
-#### `sequence(String)`
-
-    This method is deprecated.
+Send a sequence of hardware-keyboard keystrokes.
     
     
-#### `int click(PSMRL)`, `click(PSMRL, int)`,
+#### sequence(String)
 
-    This method accepts a `<PSMRL>` object and triggers a touch event after successfully located.
-    More on the `<PSMRL>` object below.
-    Throws a `FindFailed` exception if `<PSMRL>` cannot be found.
+This method is deprecated.
 
 
-#### `int rightClick(PSMRL)`, `rightClick(PSMRL, int)`, `int longClick(PSRML)`, `longCLicl(PSMRL, int)`
+#### int click(PSMRL), click(PSMRL, int),
 
-    This method accepts a `<PSMRL>` object and triggers a long-press event after successfully located.
-    The `rightClick()` exist only as defined by the `IScreen` interface and should not be used;
-    instead use `longClick()`.
-    More on the `<PSMRL>` object below.
-    Throws a `FindFailed` exception if `<PSMRL>` cannot be found.
+This method accepts a `<PSMRL>`` object and triggers a touch event after successfully located.
+More on the `<PSMRL>` object below.
+Throws a FindFailed exception if `<PSMRL>` cannot be found.
 
 
-#### `Boolean exists(String)`
-    
-    Accepts a string literal to be searched for with OCR, or a path to a filename to be located with the vision engine.
-    Returns `True` if target is found, `False` otherwise.
+#### int rightClick(PSMRL), rightClick(PSMRL, int), int longClick(PSRML), longCLicl(PSMRL, int)
 
-#### `Finder find(String)`
-
-    Accepts a string literal to be searched for with OCR, or a path to a filename to be located with the vision engine.
-    More about the Finder object can be found here: http://sikuli.org/docx/finder.html
+This method accepts a `<PSMRL>` object and triggers a long-press event after successfully located.
+The `rightClick()` methods exist only as defined by the IScreen interface and should not be used;
+instead use `longClick()`.
+More on the `<PSMRL>` object below.
+Throws a `FindFailed` exception if `<PSMRL>` cannot be found.
 
 
-#### `wake()`
+#### Boolean exists(String)
 
-    Wakes the device.
- 
-    
-#### `void sleep()`, `sleep(long)`
+Accepts a string literal to be searched for with OCR, or a path to a filename to be located with the vision engine.
+Returns `True` if target is found, `False` otherwise.
 
-    Pauses execution for the specified number of milliseconds.
-    The default can be adjusted with the `SeeMonkey.autoDelay` field.
- 
-    
+#### Finder find(String)
+
+Accepts a string literal to be searched for with OCR, or a path to a filename to be located with the vision engine.
+More about the Finder object can be found here: http://sikuli.org/docx/finder.html
+
+
+#### wake()
+
+Wakes the device.
+
+
+#### void sleep(), sleep(long)
+
+Pauses execution for the specified number of milliseconds.
+The default can be adjusted with the `SeeMonkey.autoDelay` field.
+
+
 ### PSMRL Object ###
 
 _PSMRL_ in this context can mean any one of the following types of objects, though generally you will only be using Patterns and Strings:
 
 * Pattern
 
-    Pattern objects can be handled by the IDE by clicking on a target image and adjusting parameters in the given dialog.
-    Read more about the Pattern object here: http://sikuli.org/docx/pattern.html
+Pattern objects can be handled by the IDE by clicking on a target image and adjusting parameters in the given dialog.
+Read more about the Pattern object here: http://sikuli.org/docx/pattern.html
 
 * String
 
-    If a string ends in ".png" it is assumed to be a path to an image file to be used.
-    If the image is not found, or the string does not end in ".png", then the OCR engine will attempt to locate the text on-screen.
-    
+If a string ends in ".png" it is assumed to be a path to an image file to be used.
+If the image is not found, or the string does not end in ".png", then the OCR engine will attempt to locate the text on-screen.
+
 * Match - See http://sikuli.org/docx/match.html for details
 * Region - See http://sikuli.org/docx/region.html for details
 * Location - A Java-style Location object, with x and y fields.
