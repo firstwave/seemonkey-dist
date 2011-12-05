@@ -51,10 +51,7 @@ _IScreen_ interface method, used by Sikuli.
 _IScreen_ interface method, used by Sikuli.
 
 
-#### void showMove(Location),
-void showClick(Location),
-void showTarget(Location),
-void showDropTarget(Location)
+#### void showMove(Location), void showClick(Location), void showTarget(Location), void showDropTarget(Location)
 
 _IScreen_ interface methods. No implementation on Android.
 
