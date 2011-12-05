@@ -3,6 +3,11 @@
 SeeMonkey is a [Sikuli](http://sikuli.org/) extension which enables running image-driven UI scripts on Android devices and emulators.
 It uses the Android Debug Bridge to communicate with Android devices and emulators.
 SeeMonkey scripts are written in the Python programming language.
+It is recommended that you fork this repository into one dedicated to your project, and add this as a remote:
+
+    git remote add upstream giot@github.com:SeeMonkey/seemonkey-dist
+    
+To update your distribution, issue `git pull upstream master.`
 
 ### Requirements and Installation ###
 
