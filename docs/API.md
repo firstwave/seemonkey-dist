@@ -183,7 +183,7 @@ This object can be made available with this import statement:
     
 Use the `Settings` object to configure the Sikuli interpereter.
 Full usage information can be found at http://sikuli.org/docx/globals.html#Settings
-
+There are some inconsistencies with how SeeMonkey uses these values; this will be fixed in a future update.
 -----
 * Author: Oliver Bartley
 * Date: 5 DEC 2011
