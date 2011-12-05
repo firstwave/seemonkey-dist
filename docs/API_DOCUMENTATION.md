@@ -13,7 +13,7 @@ Consult the documantation at http://sikuli.org/docx/index.html for a more in dep
     Used to prevent overloading the vision engine and adb queue.
     Default 500
     
-`int longPressDelay`
+* `int longPressDelay`
 
     Delay in miliseconds for a long press.
     Default 1000
