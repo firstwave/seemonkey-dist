@@ -7,9 +7,16 @@ Consult the documantation at http://sikuli.org/docx/index.html for a more in dep
 
 ### Fields ###
 
-`int autoDelay`
+* `int autoDelay`
 
+    Sets the default delay in milliseconds for the `sleep()` method, which is called automatically after every UI event.
+    Used to prevent overloading the vision engine and adb queue.
+    Default 500
+    
 `int longPressDelay`
+
+    Delay in miliseconds for a long press.
+    Default 1000
 
 ### Methods ###
 
@@ -167,6 +174,15 @@ If the image is not found, or the string does not end in ".png", then the OCR en
 * Match - See http://sikuli.org/docx/match.html for details
 * Region - See http://sikuli.org/docx/region.html for details
 * Location - A Java-style Location object, with x and y fields.
+
+### Sikuli Settings object ###
+
+This object can be made available with this import statement:
+
+    from org.sikuli.script import Settings
+    
+Use the `Settings` object to configure the Sikuli interpereter.
+Full usage information can be found at http://sikuli.org/docx/globals.html#Settings
 
 -----
 * Author: Oliver Bartley
