@@ -12,8 +12,7 @@ i.e. `click` methods utilize the vision engine to drive touch-screen events, and
 
 ### Methods ###
 
-* `SeeMonkey()`,
-`SeeMonkey(long, String)`
+#### `SeeMonkey()`, `SeeMonkey(long, String)`
 
     To use the SeeMonkey API in a SIkuli script, you must first initialize a SeeMonkey object:
     
@@ -31,30 +30,27 @@ i.e. `click` methods utilize the vision engine to drive touch-screen events, and
     ```
 
 
-* `ScreenImage capture()`,
-`capture(int, int, int, int)`,
-`capture(Rectangle)`,
-`capture(Region)`
+#### `ScreenImage capture()`, `capture(int, int, int, int)`, `capture(Rectangle)`, `capture(Region)`
 
     _IScreen_ interface method, used by Sikuli.
 
 
-* `Rectangle getBounds()`
+#### `Rectangle getBounds()`
 
     _IScreen_ interface method, used by Sikuli.
    
     
-* `IRobot getRobot()`
+#### `IRobot getRobot()`
 
     _IScreen_ interface method, used by Sikuli.
 
 
-* `Region newRegion(Rectangle)`
+#### `Region newRegion(Rectangle)`
 
     _IScreen_ interface method, used by Sikuli.
 
 
-* `void showMove(Location)`,
+#### `void showMove(Location)`,
 `void showClick(Location)`,
 `void showTarget(Location)`,
 `void showDropTarget(Location)`
@@ -62,13 +58,13 @@ i.e. `click` methods utilize the vision engine to drive touch-screen events, and
     _IScreen_ interface methods. No implementation on Android.
 
 
-* `MonkeyDevice getMonkeyDevice()`
+#### `MonkeyDevice getMonkeyDevice()`
 
     Returns a `com.android.monkeyrunner.MonkeyDevice`.
     See the documentation at http://developer.android.com/guide/developing/tools/MonkeyDevice.html for full documentation.
 
     
-* `String getArgs(String)`
+#### `String getArgs(String)`
 
     Used to get System properties through Java's `System.getProperty()` method.
     This is useful when passsing data at invocation via the `run-script` command using the `--set-property` argument.
@@ -79,9 +75,7 @@ i.e. `click` methods utilize the vision engine to drive touch-screen events, and
     Then `getArgs("test_output");` would return `"/foo/bar"`
  
     
-* `void press(String)`,
-`void press(String, int)`,
-`void press(String, String)`
+#### `void press(String)`, `void press(String, int)`, `void press(String, String)`
 
     Trigger a hardware key-press event.
     See http://developer.android.com/reference/android/view/KeyEvent.html for information on valid keycodes.
@@ -104,34 +98,30 @@ i.e. `click` methods utilize the vision engine to drive touch-screen events, and
     ```
 
 
-* `void longPress(String)`
+#### `void longPress(String)`
 
     Trigger a long press of a hardware button.
     The keycode is handled the same as in `press()`, and the duration can be adjusted with the `SeeMonkey.longPressDelay` field.    
 
 
-* `int type(String)`
+#### `int type(String)`
     
     Send a sequence of hardware-keyboard keystrokes.
         
         
-* `sequence(String)`
+#### `sequence(String)`
 
     This method is deprecated.
     
     
-* `int click(PSMRL)`,
-`click(PSMRL, int)`,
+#### `int click(PSMRL)`, `click(PSMRL, int)`,
 
     This method accepts a `<PSMRL>` object and triggers a touch event after successfully located.
     More on the `<PSMRL>` object below.
     Throws a `FindFailed` exception if `<PSMRL>` cannot be found.
 
 
-* `int rightClick(PSMRL)`,
-`rightClick(PSMRL, int)`,
-`int longClick(PSRML)`,
-`longCLicl(PSMRL, int)`
+#### `int rightClick(PSMRL)`, `rightClick(PSMRL, int)`, `int longClick(PSRML)`, `longCLicl(PSMRL, int)`
 
     This method accepts a `<PSMRL>` object and triggers a long-press event after successfully located.
     The `rightClick()` exist only as defined by the `IScreen` interface and should not be used;
@@ -140,29 +130,29 @@ i.e. `click` methods utilize the vision engine to drive touch-screen events, and
     Throws a `FindFailed` exception if `<PSMRL>` cannot be found.
 
 
-* `Boolean exists(String)`
+#### `Boolean exists(String)`
     
     Accepts a string literal to be searched for with OCR, or a path to a filename to be located with the vision engine.
     Returns `True` if target is found, `False` otherwise.
 
-* `Finder find(String)`
+#### `Finder find(String)`
 
     Accepts a string literal to be searched for with OCR, or a path to a filename to be located with the vision engine.
     More about the Finder object can be found here: http://sikuli.org/docx/finder.html
 
 
-* `wake()`
+#### `wake()`
 
     Wakes the device.
  
     
-* `void sleep()`, `sleep(long)`
+#### `void sleep()`, `sleep(long)`
 
     Pauses execution for the specified number of milliseconds.
     The default can be adjusted with the `SeeMonkey.autoDelay` field.
  
     
-### <PSMRL> Object ###
+### PSMRL Object ###
 
 _PSMRL_ in this context can mean any one of the following types of objects, though generally you will only be using Patterns and Strings:
 
