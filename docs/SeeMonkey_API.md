@@ -3,6 +3,7 @@
 The SeeMonkey object is how the Sikuli vision engine interacts with an Android device.
 The API has been designed to closely resemble the Sikuli API where reasonable; method names maintain the same conventions,
 i.e. `click` methods utilize the vision engine to drive touch-screen events, and the `press` methods drive hardware buttons/keyboard events.
+Consult the documantation at http://sikuli.org/docx/index.html for a more in depth look at the Sikuli API.
 
 ### Fields ###
 
@@ -61,7 +62,7 @@ _IScreen_ interface methods. No implementation on Android.
 #### MonkeyDevice getMonkeyDevice()
 
 Returns a com.android.monkeyrunner.MonkeyDevice.
-See the documentation at http://developer.android.com/guide/developing/tools/MonkeyDevice.html for full documentation.
+See the documentation at http://developer.android.com/guide/developing/tools/MonkeyDevice.html for full details.
 
 
 #### String getArgs(String)
@@ -101,7 +102,7 @@ press("home", "down_and_up") # default, not required
 #### void longPress(String)
 
 Trigger a long press of a hardware button.
-The keycode is handled the same as in `press()`, and the duration can be adjusted with the SeeMonkey.longPressDelay field.    
+The keycode is handled the same as in `press()`, and the duration can be adjusted with the `SeeMonkey.longPressDelay` field.    
 
 
 #### int type(String)
