@@ -5,7 +5,7 @@ It uses the Android Debug Bridge to communicate with Android devices and emulato
 SeeMonkey scripts are written in the Python programming language.
 It is recommended that you fork this repository into one dedicated to your project, and add this as a remote:
 
-    git remote add upstream giot@github.com:SeeMonkey/seemonkey-dist
+    git remote add upstream git@github.com:SeeMonkey/seemonkey-dist
     
 To update your distribution, issue `git pull upstream master.`
 
