@@ -26,6 +26,7 @@ The distruibution package is organized like so:
 * `/` _installation root_
     * `run-script` _Python wrapper used to properly configure a JVM and invoke the Sikuli interpereter._
     * `scripts/` _Scripts can be located anywhere, this directory is provided as a convenient way to redistribute scripts within the distribution package._
+    * `example-scripts/` _Example scripts._
     	* `sanity.sikuli` _Simple script that can be run to confirm that the environment is correctly configured and that you are able to successfully connect to a device/emulator._
     * `libs/`
     	* `python/` _This directory is for Python modules and packages that can in turn be imported into SeeMonkey scripts_
