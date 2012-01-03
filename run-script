@@ -42,7 +42,7 @@ def main():
             exit(1)
     else:
         androidSdk = stripSlash(args.androidSdk)
-        
+    
     try:
         javaClasspath = os.environ['CLASSPATH']
     except:
@@ -77,6 +77,9 @@ def main():
             procCall.append("-Dseemonkey.%s" % p)
     
     procCall.append("org.sikuli.script.SikuliScript")
+    
+    # set the android sdk path so that SeeMonkey can see it
+    procCall.append("-Dandroid.sdk.dir=%s" % androidSdk)
     
     # now we just push a script path, issue the process call for each script path given
     for s in args.path_to_script:
