@@ -75,12 +75,12 @@ def main():
     if args.props is not None:
         for p in args.props:
             procCall.append("-Dseemonkey.%s" % p)
-    
-    procCall.append("org.sikuli.script.SikuliScript")
-    
+
     # set the android sdk path so that SeeMonkey can see it
     procCall.append("-Dandroid.sdk.dir=%s" % androidSdk)
     
+    
+    procCall.append("org.sikuli.script.SikuliScript")
     # now we just push a script path, issue the process call for each script path given
     for s in args.path_to_script:
         print("Running script '%s'..." % s)
