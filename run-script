@@ -71,7 +71,7 @@ def main():
     # add set-property arguments, if available
     # note the addition of the seemonkey namespace, which makes this command less able
     # to unintentionaly attempt to set a Java system property.
-    
+    # p should be in the form of "key=value" so that the arg ends up looking like "-Dseemonkey.key=value"
     if args.props is not None:
         for p in args.props:
             procCall.append("-Dseemonkey.%s" % p)
